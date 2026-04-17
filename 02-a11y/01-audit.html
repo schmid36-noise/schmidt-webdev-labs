@@ -8,36 +8,35 @@
   <body>
     <main>
       <h1>Credit Card Audit</h1>
-    <form>
+      <form>
+        <label for="name">Name:<br /></label>
+        <input id="name" type="text" name="name" />
+        <br /><br />
+        <label for="address">Address:<br /></label>
+        <input id="address" type="text" name="address" />
+        <br /><br />
+        <label for="city">City:<br /></label>
+        <input id="city" type="text" name="city" />
+        <br /><br />
+        <label for="zip">Zip Code:<br /></label>
+        <input id="zip" type="text" name="zip" />
+        <br /><br />
+        <fieldset>
+          <legend>Credit Card Type:<br /></legend>
+          <input id="visa" type="radio" name="card" value="visa" />
+          <label for="visa">Visa <br /></label>
+          <input id="mastercard" type="radio" name="card" value="mastercard" />
+          <label for="mastercard">MasterCard <br /></label>
+          <input id="amex" type="radio" name="card" value="amex" />
+          <label for="amex">American Express<br /></label>
+        </fieldset>
 
-      <label for="name">Name:<br></label>
-      <input id="name" type="text" name="name" />
-      <br><br>
-      <label for="address">Address:<br></label>
-      <input id="address" type="text" name="address" />
-      <br><br>
-      <label for="city">City:<br></label>
-      <input id="city" type="text" name="city" />
-      <br><br>
-      <label for="zip">Zip Code:<br></label>
-      <input id="zip" type="text" name="zip" />
-      <br><br>
-      <fieldset>
-       <legend>Credit Card Type:<br></legend> 
-      <input id="visa" type="radio" name="card" value="visa" />
-      <label for="visa">Visa <br></label>
-      <input id="mastercard" type="radio" name="card" value="mastercard" />
-      <label for="mastercard">MasterCard <br></label>
-      <input id="amex" type="radio" name="card" value="amex" />
-      <label for="amex">American Express<br></label>
-      </fieldset>
-      
-      <label for="cc_number">Credit Card Number:<br></label>
-      <input id="cc_number" type="text" name="cc_number" /><br /><br />
-      <label for="cvv">CVV:<br></label>
-      <input id="cvv" type="text" name="cvv" /><br /><br />
-      <input type="button" value="Submit" />
-    </form>
+        <label for="cc_number">Credit Card Number:<br /></label>
+        <input id="cc_number" type="text" name="cc_number" /><br /><br />
+        <label for="cvv">CVV:<br /></label>
+        <input id="cvv" type="text" name="cvv" /><br /><br />
+        <input type="button" value="Submit" />
+      </form>
     </main>
   </body>
 </html>
