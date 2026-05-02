@@ -61,7 +61,7 @@ h1 {
   justify-content: space-between;
 }
 
-.header {
+.nav-header {
   height: 100px;
   width: 100%;
   background-color: black;
@@ -71,24 +71,24 @@ h1 {
   align-items: center;
 }
 
-.header h1 {
+.nav-header h1 {
   padding-left: 1rem;
   justify-content: flex-start;
 }
 
-.header ul {
+.nav-header ul {
   font-size: 1.25rem;
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
 }
 
-.header a {
+.nav-header a {
   padding: 1rem;
   color: white;
   text-decoration-line: none;
 }
-.header a:hover {
+.nav-header a:hover {
   color: greenyellow;
   text-decoration-line: underline;
 }
@@ -176,3 +176,74 @@ h1 {
 }
 
 /* Exercise 04 - CSS Grid Areas */
+
+.grid-container-area header {
+  grid-area: header;
+}
+
+.grid-container-area article {
+  grid-area: article;
+}
+
+.grid-container-area aside {
+  grid-area: aside;
+}
+
+.grid-container-area section {
+  grid-area: section;
+}
+
+.grid-container-area footer {
+  grid-area: footer;
+}
+
+.grid-container-area {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  grid-template-areas:
+    "header"
+    "article"
+    "article"
+    "article"
+    "section"
+    "section"
+    "section"
+    "aside"
+    "footer";
+}
+
+@media (min-width: 576px) {
+  .grid-container-area {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+    grid-template-areas:
+      "header   header"
+      "article  aside"
+      "article  aside"
+      "article  aside"
+      "section  section"
+      "section  section"
+      "footer   footer";
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container-area {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;
+    grid-template-areas:
+      "header   header"
+      "aside article"
+      "aside article"
+      "aside article"
+      "section  section"
+      "section  section"
+      "footer   footer";
+  }
+}
