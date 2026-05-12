@@ -11,6 +11,221 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="bg-light">
-    <h1 class="text-center m-4">Simple Game Showcase</h1>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid d-flex justify-content-between">
+          <a class="navbar-brand" href="#">Simple Game Showcase</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"> </span>
+          </button>
+
+          <div class="navbar-collapse collapse justify-content-end" id="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#dino">Dino Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#goose">Untitled Goose Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#flappy">Flappy Bird</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <h1 class="m-5 text-center">Simple Game Showcase</h1>
+
+    <main class="container">
+      <div class="row">
+        <section class="col-md-6 col-lg-4 mb-3" id="dino">
+          <div class="card h-100">
+            <img
+              class="card-img-top img-fluid w-50 d-block mx-auto"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Chromium_T-Rex-error-offline.svg/250px-Chromium_T-Rex-error-offline.svg.png"
+              alt="Dino Game on Chrome"
+            />
+            <div class="card-body text-center">
+              <h2 class="text-center card-title">Chrome Dino Game</h2>
+              <p class="text-start">
+                The Chrome Dino Game was released in 2014 by Google. It appears
+                when users lose internet connection in Chrome.
+              </p>
+              <p class="text-start">
+                Players control a dinosaur that jumps over obstacles and avoids
+                enemies. It's simple, fun, and addictive.
+              </p>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#dino-modal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-md-6 col-lg-4 mb-3" id="goose">
+          <div class="card h-100">
+            <img
+              class="card-img-top img-fluid w-50 d-block mx-auto"
+              src="https://upload.wikimedia.org/wikipedia/en/b/b2/Untitled_Goose_Game_Cover_art.jpg"
+              alt="Untitled Goose Game cover art"
+            />
+            <div class="card-body text-center">
+              <h2 class="text-center">Untitled Goose Game</h2>
+              <p class="text-start">
+                Untitled Goose Game was released in 2019 by House House. It is a
+                puzzle-stealth game where players cause chaos as a goose.
+              </p>
+              <p class="text-start">
+                The game received widespread praise for its humor, unique
+                concept, and charming design. Players especially enjoyed the
+                freedom to annoy villagers in creative ways.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#goose-modal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="col-md-6 col-lg-4 mb-3" id="flappy">
+          <div class="card h-100">
+            <img
+              class="card-img-top img-fluid w-50 d-block mx-auto"
+              src="https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png"
+              alt="Flappy Bird app icon"
+            />
+            <div class="card-body text-center">
+              <h2 class="text-center">Flappy Bird</h2>
+              <p class="text-start">
+                Flappy Bird was released in 2013 by Dong Nguyen. It is a mobile
+                game where players tap the screen to keep a bird flying between
+                pipes without hitting them.
+              </p>
+              <p class="text-start">
+                The game became extremely popular for its difficulty and
+                simplicity. Many players found it frustrating yet addictive,
+                leading to viral success before it was eventually removed.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#flappy-modal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal fade" id="dino-modal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Chrome Dino Game</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-start">
+                The Chrome Dino Game was released in 2014 by Google. It appears
+                when users lose internet connection in the Chrome browser.
+                Players control a small dinosaur that runs endlessly, jumping
+                over obstacles like cacti and dodging flying enemies.
+              </p>
+              <p class="text-start">
+                Many people describe the game as simple but addictive. It has
+                become an iconic offline pastime and is praised for turning a
+                frustrating situation into something fun.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="goose-modal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Untitled Goose Game</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-start">
+                Untitled Goose Game was released in 2019 by House House. It is a
+                puzzle-stealth game where players control a mischievous goose
+                causing chaos in a quiet village.
+              </p>
+              <p class="text-start">
+                The game received widespread praise for its humor, unique
+                concept, and charming design. Players especially enjoyed the
+                freedom to annoy villagers in creative ways.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="flappy-modal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Flappy Bird</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p class="text-start">
+                Flappy Bird was released in 2013 by Dong Nguyen. It is a mobile
+                game where players tap the screen to keep a bird flying between
+                pipes without hitting them.
+              </p>
+              <p class="text-start">
+                The game became extremely popular for its difficulty and
+                simplicity. Many players found it frustrating yet addictive,
+                leading to viral success before it was eventually removed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light text-center py-3">
+      <p>© 2026 Simple Game Showcase</p>
+    </footer>
   </body>
 </html>
