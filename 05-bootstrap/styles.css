@@ -1,3 +1,7 @@
-form {
-  max-width: 400px;
+.ira-form {
+  max-width: 550px;
+}
+
+.text-primary {
+  color: #101090 !important;
 }
