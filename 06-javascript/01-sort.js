@@ -22,66 +22,22 @@ const pokemons = [
 ];
 
 const sortPokemons = function logSortedPokemons(sortType) {
-  const sortedPokemons = [];
+  const sortedPokemons = [...pokemons];
 
-  if (sortType.includes("numerically")) {
-    //numerical sort, nothing needs to happen just copy each element over
-    for (item of pokemons) {
-      if (sortType.includes("descend")) {
-        sortedPokemons.splice(0, 0, item);
-      } else {
-        sortedPokemons.push(item);
-      }
-    }
-  } else {
-    //alphabetical sort
-    //get some sort of baseline, start with the first for simplicity
+  switch (sortType) {
+    case "numerically, in ascending order":
+      sortedPokemons.sort((a, b) => a.id - b.id);
+      break;
+    case "numerically, in descending order":
+      sortedPokemons.sort((a, b) => b.id - a.id);
+      break;
 
-    tempArray = [];
-    tempArray.push(pokemons[0]);
-
-    for (item of pokemons) {
-      //iterate through each pokemon and compare it against the baseline to eventually get the first in order
-      if (item.id == 1) {
-        //do nothing with the first element since we already added it
-      } else {
-        index = 0;
-        len = tempArray.length;
-
-        toAdd = null;
-        for (sortedItem of tempArray) {
-          if (
-            sortedItem != null &&
-            item.name.localeCompare(sortedItem.name) == -1
-          ) {
-            //if item being compared is earlier than the current element of array, it must come before it in order and should be appended at that point
-            toAdd = item;
-          } else if (index < len) {
-            //if we havent gone through all the sorted items yet, go to the next one
-            index += 1;
-          }
-        }
-
-        if (toAdd == null) {
-          //we've gone through all the items, it must be last
-          toAdd = item;
-        }
-
-        //add pokemon to sorted array
-        tempArray.splice(index, 0, toAdd);
-      }
-    }
-
-    //descending order sort
-    for (item of tempArray) {
-      if (sortType.includes("descend")) {
-        //append first element to beginning
-        sortedPokemons.splice(0, 0, item);
-      } else {
-        //append first element to end
-        sortedPokemons.push(item);
-      }
-    }
+    case "alphabetically, in ascending order":
+      sortedPokemons.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    case "alphabetically, in descending order":
+      sortedPokemons.sort((a, b) => b.name.localeCompare(a.name));
+      break;
   }
 
   return sortedPokemons;
