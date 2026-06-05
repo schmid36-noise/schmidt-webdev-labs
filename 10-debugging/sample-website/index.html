@@ -23,29 +23,27 @@
   <body>
     <header>
       <nav class="navbar large-screen-navbar">
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="#Introduction" class="nav-link hover-transition"
-              >Introduction</a
-            >
-          </li>
-          <li class="nav-list-item">
-            <a href="#History" class="nav-link hover-transition">History</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#Characteristics" class="nav-link hover-transition"
-              >Characteristics</a
-            >
-          </li>
-          <li class="nav-list-item">
-            <a href="#CatFacts" class="nav-link hover-transition">Cat Facts</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#RequestInfo" class="nav-link hover-transition"
-              >Request Info</a
-            >
-          </li>
-        </ul>
+        <div class="nav-list">
+          <a
+            href="#Introduction"
+            class="nav-link hover-transition nav-list-item"
+            >Introduction</a
+          >
+          <a href="#History" class="nav-link hover-transition nav-list-item"
+            >History</a
+          >
+          <a
+            href="#Characteristics"
+            class="nav-link hover-transition nav-list-item"
+            >Characteristics</a
+          >
+          <a href="#CatFacts" class="nav-link hover-transition nav-list-item"
+            >Cat Facts</a
+          >
+          <a href="#RequestInfo" class="nav-link hover-transition nav-list-item"
+            >Request Info</a
+          >
+        </div>
       </nav>
       <nav class="navbar small-screen-navbar">
         <input
@@ -65,31 +63,33 @@
           id="small-screen-navbar-element-container"
           class="small-screen-navbar-element-container"
         >
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <a href="#Introduction" class="nav-link hover-transition"
-                >Introduction</a
-              >
-            </li>
-            <li class="nav-list-item">
-              <a href="#History" class="nav-link hover-transition">History</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="#Characteristics" class="nav-link hover-transition"
-                >Characteristics</a
-              >
-            </li>
-            <li class="nav-list-item">
-              <a href="#CatFacts" class="nav-link hover-transition"
-                >Cat Facts</a
-              >
-            </li>
-            <li class="nav-list-item">
-              <a href="#RequestInfo" class="nav-link hover-transition"
-                >Request Info</a
-              >
-            </li>
-          </ul>
+          <div class="nav-list">
+            <a
+              href="#Introduction"
+              class="nav-link hover-transition nav-list-item"
+              >Introduction</a
+            >
+
+            <a href="#History" class="nav-link hover-transition nav-list-item"
+              >History</a
+            >
+
+            <a
+              href="#Characteristics"
+              class="nav-link hover-transition nav-list-item"
+              >Characteristics</a
+            >
+
+            <a href="#CatFacts" class="nav-link hover-transition nav-list-item"
+              >Cat Facts</a
+            >
+
+            <a
+              href="#RequestInfo"
+              class="nav-link hover-transition nav-list-item"
+              >Request Info</a
+            >
+          </div>
         </div>
       </nav>
     </header>
@@ -162,7 +162,11 @@
           <div class="popup-section">
             <div class="space-between-distributed-row-container">
               <h3>Origin</h3>
-              <button class="close-popup-button">
+              <button
+                class="close-popup-button"
+                title="close popup button"
+                aria-label="close popup button"
+              >
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -205,7 +209,11 @@
           <div class="popup-section">
             <div class="space-between-distributed-row-container">
               <h3>Acceptance</h3>
-              <button class="close-popup-button">
+              <button
+                class="close-popup-button"
+                title="close popup button"
+                aria-label="close popup button"
+              >
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -244,8 +252,8 @@
               <h3>Popularity</h3>
               <button
                 class="close-popup-button"
-                aria-label="close popup window"
-                title="close popup window"
+                title="close popup button"
+                aria-label="close popup button"
               >
                 <i class="fa-solid fa-xmark"></i>
               </button>
